@@ -11,6 +11,7 @@ namespace Week09
 * Description: THis is the driver class.
 * Instantiated an object of type SuperHuman.
 * Added a power to the superHuman object and displayed it.
+* Use ToString method of the SuperHuman class.
 */
 {
     class Program
@@ -20,6 +21,9 @@ namespace Week09
             SuperHuman superHuman = new SuperHuman("Captain America");
             superHuman.Powers.Add(new Power("Shield", 50));
             superHuman.DisplayPowers();
+            superHuman.Powers.Add(new Power("Iron Suit", 50));
+            superHuman.Powers.Add(new Power("Hammer", 45));
+            Console.WriteLine(superHuman.ToString());
         }
     }
 }
