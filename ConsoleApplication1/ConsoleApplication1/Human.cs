@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 /* Name: Akshay Patel
  * Date: 11th July, 2017
  * Description: THis is the Abstract Human Class.
+ * Added Public Abstract method DisplaySkills.
  */
 
 namespace Week09
@@ -42,5 +43,8 @@ namespace Week09
         {
             this.Name = name;
         }
+
+        //Public Absrtact methods
+        public abstract void DisplaySkills();
     }
 }
