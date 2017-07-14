@@ -9,6 +9,7 @@ using System.Threading.Tasks;
  * Description: THis is the SuperHuman sub Class.
  * Added Private Initialize Method.
  * Added Public AddPower Method.
+ * Added Overriden method (ToString).
  */
 
 namespace Week09
@@ -36,7 +37,7 @@ namespace Week09
         {
             this._initialize();
         }
-        
+
         //Private Method
 
         /// <summary>
@@ -59,10 +60,21 @@ namespace Week09
 
         public void DisplayPowers()
         {
-            foreach(var power in Powers)
-            { 
-            Console.WriteLine("Name: " + power.Name + "Rank: " + power.Rank);
+            foreach (var power in Powers)
+            {
+                Console.WriteLine("Name: " + power.Name + "Rank: " + power.Rank);
             }
+        }
+        public override string ToString()
+        {
+            string outputString = "";
+            outputString += "SuperHuman Name: " + this.Name + "\n";
+
+            foreach (Power power in this.Powers)
+            {
+                outputString += "Power: " + power.Name + "Rank: " + power.Rank + "\n";
+            }
+            return outputString;
         }
     }
 }
