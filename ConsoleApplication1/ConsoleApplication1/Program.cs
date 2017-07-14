@@ -18,6 +18,7 @@ namespace Week09
         {
             SuperHuman superHuman = new SuperHuman("Captain America");
             superHuman.Powers.Add(new Power());
+            superHuman.Powers.Add(new Power("Shield", 50));
         }
     }
 }
