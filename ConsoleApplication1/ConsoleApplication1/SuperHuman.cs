@@ -20,7 +20,15 @@ namespace Week09
     {
         //Private Fields
         private List<Power> _powers;
+
         //Public Properties
+        public List<Power> Powers
+        {
+            get
+            {
+                return this._powers;
+            }
+        }
 
         //Constructor
         public SuperHuman(string name) : base(name)
