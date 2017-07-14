@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 /* Name: Akshay Patel
  * Date: 11th July, 2017
  * Description: THis is the SuperHuman sub Class.
+ * Added Private Initialize Method.
  */
 
 namespace Week09
@@ -18,14 +19,25 @@ namespace Week09
     public class SuperHuman : Human
     {
         //Private Fields
-
+        private List<Power> _powers;
         //Public Properties
 
         //Constructor
         public SuperHuman(string name) : base(name)
         {
-
+            this._initialize();
         }
+        
+        //Private Method
+
+        /// <summary>
+        /// THis method initializes and assigns default values of Class Fields.
+        /// </summary>
+        private void _initialize()
+        {
+            this._powers = new List<Power>();
+        }
+
         //Public Method
     }
 }
